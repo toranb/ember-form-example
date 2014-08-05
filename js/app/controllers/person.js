@@ -1,4 +1,4 @@
-var PeopleController = Ember.ArrayController.extend({
+var PersonController = Ember.ObjectController.extend({
     errors: [],
     name: '',
     password: '',
@@ -28,4 +28,4 @@ var PeopleController = Ember.ArrayController.extend({
     }
 });
 
-export default PeopleController;
+export default PersonController;
