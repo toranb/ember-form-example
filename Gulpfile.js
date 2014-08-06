@@ -20,6 +20,8 @@ var paths = {
         'js/vendor/ember/ember.min.js',
         'js/vendor/ember-loader/loader.js',
         'vendor/ember-resolver.js',
+        'vendor/ember_forms.js',
+        'vendor/ember-validations.js',
         'js/dist/tmpl.min.js',
         'js/app/**/*.js'
     ],
@@ -29,6 +31,8 @@ var paths = {
         'js/vendor/ember/ember.js',
         'js/vendor/ember-loader/loader.js',
         'vendor/ember-resolver.js',
+        'vendor/ember_forms.js',
+        'vendor/ember-validations.js',
         'js/dist/tmpl.min.js',
         'js/app/**/*.js',
         'js/tests/**/*.js',

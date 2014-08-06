@@ -1,24 +1,6 @@
-<div id="errors" style="margin-left: -15px; margin-right: -15px;" {{bind-attr class="errors::hidden"}}>
-  {{#each error in errors}}
-    <div class="alert alert-danger">{{error}}</div>
-  {{/each}}
-</div>
-<form class="form-horizontal">
-    <div {{bind-attr class=":form-group has_name::has-error"}}>
-        <label for="name" class="control-label">Name:</label>
-        {{input class="form-control" id="name" value=name}}
-    </div>
-    <div {{bind-attr class=":form-group has_password::has-error"}}>
-        <label for="password" class="control-label">Password:</label>
-        {{input type="password" class="form-control" id="password" value=password}}
-        <p id="password_error" {{bind-attr class=":help-block has_password:hidden:"}}>Please enter a password that is at least 8 characters</p>
-    </div>
-    <div {{bind-attr class=":form-group has_confirm_password::has-error"}}>
-        <label for="confirm_password" class="control-label">Confirm Password:</label>
-        {{input type="password" class="form-control" id="confirm_password" value=confirm_password}}
-        <p id="confirm_password_error" {{bind-attr class=":help-block has_confirm_password:hidden:"}}>The two passwords must match</p>
-    </div>
-    <div>
-        <button style="margin-left: -15px;" id="add_person" class="btn btn-success" {{action "submit"}}>Create Person</button>
-    </div>
-</form>
+{{#em-form model=model submit_button=false}}
+    {{em-input label="Name" property="name"}}
+    {{em-input label="Password" property="password"}}
+    {{em-input label="Confirm" property="confirm_password"}}
+    <button style="margin-left: -15px;" id="add_person" class="btn btn-success" {{bind-attr disabled=isInvalid}} {{action "submit"}}>Create Person</button>
+{{/em-form}}
