@@ -1,6 +1,6 @@
 {{#em-form model=model submit_button=false}}
     {{em-input label="Name" property="name"}}
-    {{em-input label="Password" property="password"}}
-    {{em-input label="Confirm" property="confirm_password"}}
+    {{em-input type="password" label="Password" property="password"}}
+    {{em-input type="password" label="Confirm" property="confirm_password"}}
     <button style="margin-left: -15px;" id="add_person" class="btn btn-success" {{bind-attr disabled=isInvalid}} {{action "submit"}}>Create Person</button>
 {{/em-form}}
