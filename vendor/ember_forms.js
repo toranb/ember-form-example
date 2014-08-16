@@ -773,7 +773,7 @@ Em.Forms.FormInputComponent = Em.Forms.FormGroupComponent.extend({
     autofocus: Em.computed.alias('parentView.autofocus'),
     disabled: Em.computed.alias('parentView.disabled'),
     type: Em.computed.alias('parentView.type'),
-    id: Em.computed.alias('parentView.id'),
+    id: Em.computed.alias('parentView.inputId'),
     model: Em.computed.alias('parentView.model'),
     propertyName: Em.computed.alias('parentView.propertyName')
   }),
