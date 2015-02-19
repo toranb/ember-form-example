@@ -17,12 +17,12 @@ test('required field password provides a legit user experience', function(assert
     visit('/');
     assert.contains('form-group', findInput('Password').parent().attr('class'));
     equal(find('#add_person').attr('disabled'), 'disabled');
-    findInput('Password').val('12345678');
+    find('#password>input').val('12345678');
     click('#add_person');
     andThen(function(){
-        assert.contains('form-group', findInput('Password').parent().attr('class'));
+        assert.contains('form-group', find('#password>input').parent().attr('class'));
     });
-    findInput('Password').val('');
+    find('#password>input').val('');
     // triggerEvent('#password', 'keyup');
     // andThen(function(){
     //     assert.contains('form-group', findInput('Password').parent().attr('class'));

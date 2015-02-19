@@ -767,15 +767,17 @@ Syntax:
  */
 Em.Forms.FormInputComponent = Em.Forms.FormGroupComponent.extend({
   controlView: Em.TextField.extend(Em.Forms.ControlMixin, {
-    attributeBindings: ['placeholder', 'required', 'autofocus', 'disabled'],
+    attributeBindings: ['placeholder', 'required', 'autofocus', 'disabled', 'id'],
     placeholder: Em.computed.alias('parentView.placeholder'),
     required: Em.computed.alias('parentView.required'),
     autofocus: Em.computed.alias('parentView.autofocus'),
     disabled: Em.computed.alias('parentView.disabled'),
     type: Em.computed.alias('parentView.type'),
+    id: Em.computed.alias('parentView.inputId'),
     model: Em.computed.alias('parentView.model'),
     propertyName: Em.computed.alias('parentView.propertyName')
   }),
+  id: void 0,
   property: void 0,
   label: void 0,
   placeholder: void 0,
